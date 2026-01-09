@@ -196,3 +196,4 @@ def generate_full_report(parsed_logs, summary):
     print(f"HTML report generated: {html_path}")
     print("Charts saved to folder: visuals/")
     return html_path
+
