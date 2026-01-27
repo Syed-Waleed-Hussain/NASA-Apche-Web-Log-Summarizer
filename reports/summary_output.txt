@@ -1,0 +1,47 @@
+========== Network Log Summary ==========
+
+Total Requests: 446494
+Unique IPs: 23210
+
+---- Status Code Counts ----
+  200 : 396297
+  304 : 40329
+  302 : 7538
+  404 : 2272
+  403 : 40
+  501 : 10
+  400 : 8
+
+---- Top 15 Requested URLs ----
+  /images/NASA-logosmall.gif : 31549
+  /images/MOSAIC-logosmall.gif : 23113
+  /images/USA-logosmall.gif : 22938
+  /images/WORLD-logosmall.gif : 22754
+  /images/ksclogo-medium.gif : 22471
+  /images/KSC-logosmall.gif : 20575
+  /ksc.html : 16102
+  /history/apollo/images/apollo-logo1.gif : 9997
+  /images/launch-logo.gif : 9476
+  / : 9392
+  /images/ksclogosmall.gif : 7575
+  /shuttle/missions/sts-69/count69.gif : 6473
+  /shuttle/countdown/ : 6352
+  /shuttle/missions/sts-69/mission-sts-69.html : 6172
+  /shuttle/missions/sts-69/sts-69-patch-small.gif : 6103
+
+---- Top 15 Active IPs ----
+  163.206.89.4 : 4791
+  128.217.62.1 : 1435
+  163.205.1.19 : 1360
+  163.205.3.104 : 1292
+  163.205.156.16 : 1256
+  163.205.19.20 : 1252
+  128.217.62.2 : 1054
+  163.206.137.21 : 1015
+  128.159.122.110 : 949
+  128.159.132.56 : 848
+  128.159.144.83 : 812
+  128.159.111.141 : 798
+  163.205.11.31 : 776
+  163.205.16.75 : 762
+  128.159.122.137 : 711
