@@ -10,7 +10,6 @@ def ensure_dirs():
     Path("report").mkdir(exist_ok=True)
 
 def build_dataframe_from_parsed(parsed_logs):
-  
     df = pd.DataFrame(parsed_logs, columns=["ip", "timestamp", "request", "status"])
     # Parse the Apache/NASA timestamp explicitly (e.g. 01/Aug/1995:00:00:01 -0400)
     df["timestamp"] = pd.to_datetime(
@@ -21,6 +20,7 @@ def build_dataframe_from_parsed(parsed_logs):
    
     df = df.dropna(subset=["timestamp", "ip"]).copy()
 
+    
     # split request into method and url 
     def split_req(r):
         try:
@@ -35,6 +35,7 @@ def build_dataframe_from_parsed(parsed_logs):
     # convert status to integer
     df["status"] = pd.to_numeric(df["status"], errors="coerce").astype("Int64")
     return df
+
 
 # ---------------- Plots ----------------
 def plot_traffic_per_hour(df, out="visuals/traffic_per_hour.png"):
@@ -196,4 +197,5 @@ def generate_full_report(parsed_logs, summary):
     print(f"HTML report generated: {html_path}")
     print("Charts saved to folder: visuals/")
     return html_path
+
 
