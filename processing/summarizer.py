@@ -13,7 +13,7 @@ def summarize_logs(parsed_logs, top_n=15):
     """
     summary = {}
 
-    # Total number of requests
+    # Total number of request
     summary["total_requests"] = len(parsed_logs)
 
     # List of all client IPs
@@ -24,7 +24,7 @@ def summarize_logs(parsed_logs, top_n=15):
     status_codes = [entry[3] for entry in parsed_logs]
     summary["status_counts"] = dict(Counter(status_codes))
 
-    # Requested URLs (extracted from the request field)
+    # Requested URL (extracted from the request field)
     urls = []
     for entry in parsed_logs:
         parts = entry[2].split(" ")
@@ -127,3 +127,4 @@ def plot_summary(summary, output_dir="reports/charts/"):
         plt.tight_layout()
         plt.savefig(os.path.join(output_dir, "top_ips.png"), dpi=300)
         plt.close()
+
