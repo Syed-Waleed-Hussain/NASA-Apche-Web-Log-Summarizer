@@ -3,10 +3,7 @@ import pandas as pd
 import os
 
 def run_time_analysis(parsed_logs, output_dir="datasets/cleaned"):
-    """
-    Analyzes traffic over time and exports structured CSVs.
-    """
-    print(f"Running Time Analysis...")
+     print(f"Running Time Analysis...")
     os.makedirs(output_dir, exist_ok=True)
 
     # Convert list of tuples to DataFrame
@@ -36,5 +33,6 @@ def run_time_analysis(parsed_logs, output_dir="datasets/cleaned"):
     daily_csv = os.path.join(output_dir, "temporal_analysis_daily.csv")
     daily_counts.to_csv(daily_csv)
     print(f"   -> Exported: {daily_csv}")
+
 
     return df  # Return cleaned DF in case other modules need it
