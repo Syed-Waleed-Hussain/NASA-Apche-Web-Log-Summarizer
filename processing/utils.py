@@ -36,10 +36,7 @@ def file_size(path):
     return f"{size:.2f} TB"
 
 def print_progress(current, total, step_percent=5):
-    """
-    Shows progress in terminal in steps of step_percent (default 5%).
-    Avoids printing for every single line.
-    """
+ 
     percent = (current / total) * 100
     # only print when current percent crosses next multiple of step_percent
     if percent >= print_progress.last_print + step_percent or current == total:
@@ -69,3 +66,4 @@ def log_error(message, logfile="reports/error_log.txt"):
     timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
     with open(logfile, "a") as f:
         f.write(f"[{timestamp}] {message}\n")
+
