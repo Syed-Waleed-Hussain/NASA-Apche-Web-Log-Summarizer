@@ -47,3 +47,4 @@ def parse_log_file(filepath):
     print("\nParsing completed!")
 
     return results
+
