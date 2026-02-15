@@ -25,14 +25,13 @@ def run_error_analysis(parsed_logs, output_dir="datasets/cleaned"):
     # 1. Errors per IP
     ip_errors = error_df["ip"].value_counts().reset_index()
     ip_errors.columns = ["IP_Address", "Error_Count"]
-    
     # Save to CSV
     error_csv = os.path.join(output_dir, "device_errors.csv")
     ip_errors.to_csv(error_csv, index=False)
     print(f"   -> Exported: {error_csv}")
-
     # 2. (Optional) Detailed Error Log
     # saves a detailed CSV with just the error rows
     detailed_csv = os.path.join(output_dir, "full_error_log.csv")
     error_df.to_csv(detailed_csv, index=False)
+
     print(f"   -> Exported: {detailed_csv}")
